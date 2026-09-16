@@ -1,0 +1,4 @@
+[tools]
+codex = "latest"
+"github:can1357/oh-my-pi" = "latest"
+node = "26.8.1"

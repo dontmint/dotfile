@@ -1,0 +1,15 @@
+# Never commit these, whatever a manifest line or a manual copy pulls in.
+# capture.sh only takes manifested paths, but this is the net beneath it.
+.env
+.env.*
+**/.env
+**/.env.*
+**/id_rsa*
+**/id_ed25519*
+**/id_ecdsa*
+**/*.pem
+**/*.key
+**/known_hosts*
+**/cookies.sqlite
+**/Credentials
+**/token*

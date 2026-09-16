@@ -1,0 +1,19 @@
+# rsync exclusions applied inside every captured directory.
+# These are either regenerable (stock templates), stale (editor backups) or
+# machine junk that has no business in a config repo.
+
+*.bak.*
+*.sample
+*~
+*.swp
+*.orig
+*.rej
+.git/
+
+# Runtime leftovers: unix sockets and address files written by running daemons
+# (fcitx/ibus), and caches named as such. Paths are relative to the directory
+# being copied, so these are anchored with a leading slash.
+/dbus/
+/bus/
+cached_*
+__pycache__/

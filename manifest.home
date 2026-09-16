@@ -1,0 +1,63 @@
+# Paths captured from $HOME, one per line, relative to $HOME.
+#
+# Directories are mirrored with `rsync -a --delete` (so deletions propagate),
+# files are copied as they are. Add a line here and the next `./capture.sh`
+# snapshots it too. Anything not listed -- browser profiles, caches, private
+# keys -- is deliberately left out; see the README.
+
+# --- shell -----------------------------------------------------------------
+.bashrc
+.bash_profile
+.bash_logout
+.XCompose
+.ssh/authorized_keys
+
+# --- Hyprland / Omarchy ----------------------------------------------------
+.config/hypr
+.config/omarchy
+.config/autostart
+.config/environment.d
+.config/hyprland-preview-share-picker
+
+# --- Omarchy state that is really configuration ----------------------------
+.local/state/omarchy/toggles
+.local/state/omarchy/current/theme.name
+
+# --- terminals -------------------------------------------------------------
+.config/alacritty
+.config/foot
+.config/ghostty
+.config/kitty
+.config/starship.toml
+.config/xdg-terminals.list
+
+# --- apps ------------------------------------------------------------------
+.config/btop
+.config/chromium-flags.conf
+.config/dconf
+.config/fcitx
+.config/fcitx5
+.config/fontconfig
+.config/git
+.config/gtk-3.0
+.config/gtk-4.0
+.config/herdr
+.config/ibus
+.config/imv
+.config/lazygit
+.config/mimeapps.list
+.config/mise
+.config/nautilus
+.config/nvim
+.config/obsidian
+.config/opencode
+.config/systemd
+.config/tmux
+.config/user-dirs.dirs
+.config/wireplumber
+.config/xournalpp
+.config/yay
+
+# --- user-local files ------------------------------------------------------
+.local/bin
+.local/share/applications
