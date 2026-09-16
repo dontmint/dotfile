@@ -14,16 +14,28 @@ apply.sh         repo -> live machine
 system/apply-system.sh   the root half of apply.sh
 ```
 
-## Restoring after a reinstall
+## One command
+
+On a fresh Omarchy, logged in as your own user, this is the whole restore:
 
 ```bash
-# 1. Fresh Omarchy, logged in, your user created.
-# 2. Get this repo back:
-git clone <this-repo> ~/dotfiles
-
-# 3. Put everything back:
-~/dotfiles/apply.sh
+git clone <this-repo> ~/dotfiles && ~/dotfiles/apply.sh
 ```
+
+Paste your clone URL over `<this-repo>` once and keep the line: it fetches the
+repo, restores every tracked file, applies the system half through `sudo`,
+re-applies the theme and reloads Hyprland and the shell. A private repo just
+means git asks for credentials mid-command.
+
+Already cloned, or re-running after more captures landed:
+
+```bash
+git -C ~/dotfiles pull && ~/dotfiles/apply.sh
+```
+
+## Restoring after a reinstall
+
+Same thing, spelled out, plus the variants.
 
 `apply.sh` restores `$HOME`, then runs `system/apply-system.sh` under `sudo` for
 `/etc`, the sleep masks and the service enablement, then re-applies the captured
@@ -41,6 +53,9 @@ Useful variants:
 
 `--packages` reinstalls the full explicit list, which is mostly what Omarchy
 already had. It is opt-in because it is the slow, noisy part.
+
+If `git` is somehow missing on the fresh install:
+`omarchy pkg add git` first, then run the one-liner.
 
 ## Keeping it current
 
