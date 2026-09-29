@@ -29,6 +29,7 @@
 .config/ghostty
 .config/kitty
 .config/starship.toml
+.config/wezterm
 .config/xdg-terminals.list
 
 # --- apps ------------------------------------------------------------------
